@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+}
+
 :root {
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+  --background: #fcfcfc;
+  --foreground: #333333;
+  --accent: #00d0ff;
+}
+
+.dark {
+  --background: #222222;
+  --foreground: #f2f2f2;
 }
 
 *,
@@ -17,51 +28,6 @@
 html,
 body {
     min-height: 100%;
-}
-
-:root {
-    --background: #fcfcfc;
-    --secondary-background: #f5f5f5;
-    --background-radial: radial-gradient(circle, #fcfcfc 1%, #dde2e4 100%);
-    --background-modal: #f2f2f233;
-    --background-tootip: #222222;
-    --logo: #00ccff;
-    --foreground: #333333;
-    --secondary-foreground: #666666;
-    --foreground-tooltip: #fcfcfc;
-    --border: #333333;
-    --border-hover: #00ccff;
-    --shadow: #33333333;
-    --warning-bg: #ffe5e5;
-    --warning-icon: #d8000c;
-    --button: #00ccff;
-    --button-cancel: #ff0066;
-    --button-google: #ff4b4b;
-    --button-facebook: #1877f2;
-    --button-apple: #000000;
-    --button-hover: #2ec2fc;
-    --entries: #00ff00;
-    --exits: #fb4545;
-    --balance: #ffbf00;
-    --success: #00C9A7;
-    --erro: #D83121;
-}
-  
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #222222;
-        --secondary-background: #333333;
-        --background-radial: radial-gradient(circle, #323232 1%, #424242 100%);
-        --background-modal: #22222233;
-        --background-tooltip: #f2f2f2;
-        --foreground: #f2f2f2;
-        --secondary-foreground: #e4e4e4;
-        --foreground-tooltip: #222222;
-        --border: #444444;
-        --border-hover: #00ccff;
-        --shadow: #fcfcfc33;
-        --warning-bg: #222222;
-    }
 }
 
 #root {
