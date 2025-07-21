@@ -8,6 +8,7 @@
   --background: #fcfcfc;
   --foreground: #333333;
   --accent: #00d0ff;
+  --accent-hover: #00d0ff;
 }
 
 .dark {
@@ -39,15 +40,17 @@ body {
   flex-direction: column;
 }
 
-@theme {
+/* Animate for typewriter */
+:root {
   --animate-blink: blink 1.5s infinite;
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
+}
+  
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
