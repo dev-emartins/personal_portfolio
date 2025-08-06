@@ -64,27 +64,28 @@ function Header() {
               >
                 {item.name}
               </NavLink>
-            ))}
-
+            ))}            
+          </div>
+          <div className="flex items-center gap-5">
             {/* Botão de tema */}
             <button
               onClick={toggleTheme}
-              className="p-3 rounded-3xl bg-(--accent) cursor-pointer"
+              className="text-2xl text-(--accent) transition-colors hover:rotate-22 duration-300 cursor-pointer"
             >
               {theme === 'dark' 
-                ? <FaMoon className='align-text-top text-base text-blue-50 transition-colors hover:rotate-22 duration-300' /> 
-                : <FaSun className='align-text-top text-base text-blue-50 transition-colors hover:rotate-22 duration-300' />
+                ? <FaMoon /> 
+                : <FaSun />
               }
             </button>
-          </div>
 
-          {/* Botão do menu mobile */}
-          <button
-            className="md:hidden text-(--accent) focus:text-cyan-600 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <FaCircleXmark className='text-2xl' /> : <FaBars className='text-2xl' />}
-          </button>
+            {/* Botão do menu mobile */}
+            <button
+              className="md:hidden text-(--accent) cursor-pointer"
+              onClick={toggleMenu}
+            >
+              {isMenuOpen ? <FaCircleXmark className='text-2xl' /> : <FaBars className='text-2xl' />}
+            </button>
+          </div>          
         </div>
 
         {/* Menu mobile */}
@@ -100,24 +101,10 @@ function Header() {
                 >
                   {item.name}
                 </NavLink>
-              ))}
-              <button
-                onClick={toggleTheme}
-                className="flex items-center justify-center p-3 hover:text-cyan-500 transition-colors cursor-pointer"
-              >
-                {theme === 'dark' ? (
-                  <>
-                    <FaMoon className='mr-2' /> Dark Mode
-                  </>
-                ) : (
-                  <>
-                    <FaSun className='mr-2' /> Light Mode
-                  </>
-                )}
-              </button>
+              ))}              
             </div>
           </div>
-        )}
+        )}          
       </nav>
     </header>
   )
