@@ -1,8 +1,7 @@
 import { useRef, useEffect, useState } from "react"
 import { FaBars, FaCircleXmark, FaMoon, FaSun } from "react-icons/fa6"
 import { Link, NavLink } from "react-router-dom"
-
-import Logo from "@/assets/logo.svg"
+import Logo from "./Logo"
 
 function Header() {
   const [theme, setTheme] = useState(() => localStorage.getItem('portTheme') || 'dark')
@@ -51,8 +50,8 @@ function Header() {
     <header className='w-full p-5 flex justify-center items-center'>
       <nav className='w-full'>
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/">
-            <img src={ Logo } alt='Logo' className='w-24 md:w-32' />
+          <Link to="/" className="text-(--accent)">
+            <Logo />
           </Link>
 
           {/* Menu para desktop */}
