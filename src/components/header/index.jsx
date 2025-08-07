@@ -48,7 +48,7 @@ function Header() {
 
   return (
     <header className='w-full px-5 py-3 flex justify-center items-center'>
-      <nav className='w-full'>
+      <nav className='w-full max-w-7xl'>
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <Logo />
