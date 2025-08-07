@@ -37,10 +37,10 @@ function Typewriter(){
   }, [charIndex, index, isDeleting])
 
   return (
-    <p className="w-auto flex items-center">
-      <span className="text-2xl font-black mr-1 text-(--accent)">root@dem:/#</span>
-      <span className="text-2xl font-medium" ref={ typingRef }></span>
-      <span className="text-2xl font-bold animate-(--animate-blink)">&#x025AE;</span>
+    <p className="w-auto font-mono flex items-center text-base md:text-xl">
+      <span className="font-black mr-1 text-(--foreground)/60">root@dem:/#</span>
+      <span className="font-medium" ref={ typingRef }></span>
+      <span className="font-black animate-(--animate-blink)">|</span>
     </p>
   )
 }

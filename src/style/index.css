@@ -7,8 +7,6 @@
 :root {
   --background: #fcfcfc;
   --foreground: #333333;
-  --accent: #00d0ff;
-  --accent-hover: #00d0ff;
 }
 
 .dark {

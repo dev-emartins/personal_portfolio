@@ -47,20 +47,20 @@ function Header() {
   ]
 
   return (
-    <header className='w-full p-5 flex justify-center items-center'>
+    <header className='w-full px-5 py-3 flex justify-center items-center'>
       <nav className='w-full'>
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-(--accent)">
+          <Link to="/">
             <Logo />
           </Link>
 
           {/* Menu para desktop */}
-          <div className="hidden md:flex md:space-x-4 items-center">
+          <div className="hidden py-3 md:flex items-center gap-4">
             {menu_itens.map(item => (
               <NavLink
                 key={item.name}
                 to={item.path}
-                className={({ isActive }) => isActive ? 'text-(--accent)' : 'hover:text-cyan-500'}
+                className="hover:text-(--foreground)/60"
               >
                 {item.name}
               </NavLink>
@@ -70,7 +70,7 @@ function Header() {
             {/* Botão de tema */}
             <button
               onClick={toggleTheme}
-              className="text-2xl text-(--accent) transition-colors hover:rotate-22 duration-300 cursor-pointer"
+              className="p-2 text-xl rounded-full transition-colors hover:bg-(--foreground)/20 cursor-pointer"
             >
               {theme === 'dark' 
                 ? <FaMoon /> 
@@ -90,13 +90,13 @@ function Header() {
 
         {/* Menu mobile */}
         {isMenuOpen && (
-          <div ref={ menuRef } className="md:hidden w-full absolute left-0 z-50 px-5 py-3 shadow-lg">
-            <div className="bg-(--background) flex flex-col justify-center items-center gap-5">
+          <div ref={ menuRef } className="bg-(--background) md:hidden w-full absolute left-0 z-50 px-5 py-3 shadow-lg">
+            <div className="flex flex-col justify-center items-center gap-5">
               {menu_itens.map(item => (
                 <NavLink
                   key={item.name}
                   to={item.path}
-                  className={({ isActive }) => isActive ? 'text-(--accent) py-2 text-center text-xl' : 'hover:text-cyan-500 py-2 text-center text-xl'}
+                  className="hover:text-(--foreground)/60"
                   onClick={toggleMenu}
                 >
                   {item.name}

@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="w-full flex-1">
+      <main className="w-full flex-1 flex justify-center items-center">
         <Outlet />
       </main>
       <Footer />
