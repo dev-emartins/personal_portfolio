@@ -16,7 +16,7 @@ function Home(){
                 <h4 className="w-full md:w-xl flex justify-start items-center p-4">
                     { <Typewriter  /> }
                 </h4>
-                <div className="p-4">
+                <div className="w-full p-4 flex justify-center md:justify-start items-center">
                     <Button icon={ FaRegCircleQuestion } text="Saiba mais" link="/about" />
                 </div>
             </div>
