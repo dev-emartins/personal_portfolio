@@ -4,13 +4,13 @@ import { Link, NavLink } from "react-router-dom"
 import Logo from "./Logo"
 
 function Header() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('portTheme') || 'dark')
+  const [theme, setTheme] = useState(() => localStorage.getItem('portTheme') || 'light')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef(null)
 
   useEffect(() => {
     localStorage.setItem('portTheme', theme)
-    document.documentElement.classList.toggle('dark', theme === 'dark')
+    document.documentElement.classList.toggle('dark', theme === 'light')
   }, [theme])
 
   const toggleTheme = () => {
@@ -54,7 +54,6 @@ function Header() {
             <Logo />
           </Link>
 
-          {/* Menu para desktop */}
           <div className="hidden py-3 md:flex items-center gap-4">
             {menu_itens.map(item => (
               <NavLink
@@ -66,19 +65,16 @@ function Header() {
               </NavLink>
             ))}            
           </div>
-          <div className="flex items-center gap-5">
-            {/* Botão de tema */}
+          <div className="flex items-center gap-5">            
             <button
               onClick={toggleTheme}
               className="p-2 text-xl rounded-full transition-colors hover:bg-(--foreground)/20 cursor-pointer"
             >
               {theme === 'dark' 
-                ? <FaMoon /> 
-                : <FaSun />
+                ? <FaSun />
+                : <FaMoon /> 
               }
-            </button>
-
-            {/* Botão do menu mobile */}
+            </button>            
             <button
               className="md:hidden text-(--accent) cursor-pointer"
               onClick={toggleMenu}
@@ -87,8 +83,7 @@ function Header() {
             </button>
           </div>          
         </div>
-
-        {/* Menu mobile */}
+        
         {isMenuOpen && (
           <div ref={ menuRef } className="bg-(--background) md:hidden w-full absolute left-0 z-50 px-5 py-3 shadow-lg">
             <div className="flex flex-col justify-center items-center gap-5">
