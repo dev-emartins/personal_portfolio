@@ -40,10 +40,10 @@ function Header() {
   }, [isMenuOpen])
 
   const menu_itens = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Início', path: '/' },
+    { name: 'Sobre', path: '/about' },
+    { name: 'Habilidades', path: '/skills' },
+    { name: 'Contato', path: '/contact' }
   ]
 
   return (

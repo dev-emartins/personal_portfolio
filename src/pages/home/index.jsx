@@ -7,7 +7,7 @@ function Home(){
     return (
         <section className="max-2xl:w-7xl flex flex-col-reverse md:flex-row items-center justify-center gap-3">
             <div className="w-full md:w-1/2 pt-3 md:pt-0">
-                <h3 className="text-base md:text-xl font-black font-sans px-3 py-1">Olá! Boa-vinda, meu nome é</h3>
+                <h3 className="text-base md:text-xl font-black font-sans px-3 py-1">Olá! Bem-vindo(a), meu nome é</h3>
                 <h2 className="text-4xl md:text-7xl font-black font-sans p-3">Everaldo Martins</h2>
                 <h4 className="w-full md:w-xl flex justify-start items-center px-4 py-6">{ <Typewriter  /> }</h4>
                 <div className="p-4">
