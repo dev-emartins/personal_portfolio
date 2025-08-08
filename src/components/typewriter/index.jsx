@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const texts = ["Web Designer", "Desenvolvedor", "Engenheiro de Softwares"]
-const typingSpeed = 400
+const typingSpeed = 300
 const erasingSpeed = 150
 const delayAfterTyping = 1500
 

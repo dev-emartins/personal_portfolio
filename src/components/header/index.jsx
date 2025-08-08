@@ -85,13 +85,13 @@ function Header() {
         </div>
         
         {isMenuOpen && (
-          <div ref={ menuRef } className="bg-(--background) md:hidden w-full absolute left-0 z-50 px-5 py-3 shadow-lg">
-            <div className="flex flex-col justify-center items-center gap-5">
+          <div ref={ menuRef } className="bg-(--background) md:hidden w-full h-1/3 absolute left-0 z-50 px-5 py-3 shadow-lg">
+            <div className="h-full flex flex-col justify-center items-center gap-8">
               {menu_itens.map(item => (
                 <NavLink
                   key={item.name}
                   to={item.path}
-                  className="hover:text-(--foreground)/60"
+                  className="text-xl hover:text-(--foreground)/60"
                   onClick={toggleMenu}
                 >
                   {item.name}

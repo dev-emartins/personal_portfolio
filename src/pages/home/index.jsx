@@ -1,7 +1,8 @@
-import { FaRegCircleQuestion } from "react-icons/fa6"
+import { FaRegCircleQuestion , FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa6"
 import Typewriter from "@/components/typewriter"
-import user from "@/assets/user.png"
 import ButtonLink from "@/components/buttonlink"
+import Social from "@/components/social"
+import user from "@/assets/user.png"
 
 function Home(){
     return (
@@ -16,12 +17,18 @@ function Home(){
                 <h4 className="w-full md:w-xl flex justify-start items-center p-4">
                     { <Typewriter  /> }
                 </h4>
+                <div className="w-full p-4 flex justify-center md:justify-start gap-4">
+                    <Social icon={ FaEnvelope } link="mailto:everaldoinfortecnico@gmail.com" />
+                    <Social icon={ FaLinkedin } link="https://www.linkedin.com/in/everaldomartins" />
+                    <Social icon={ FaInstagram } link="https://www.instagram.com/dev_emartins" />
+                    <Social icon={ FaGithub } link="https://github.com/dev-emartins" />                            
+                </div>
                 <div className="w-full p-4 flex justify-center md:justify-start items-center">
                     <ButtonLink icon={ FaRegCircleQuestion } text="Saiba mais" link="/about" />
                 </div>
             </div>
             <div className="w-full md:w-1/2 pt-3 md:pt-0 flex justify-center items-center">
-                <figure className="w-4/5 block overflow-hidden bg-(--foreground)/10 backdrop-blur-xs rounded-full shadow-2xs shadow-(--foreground)/60">
+                <figure className="w-4/5 block overflow-hidden bg-(--foreground)/10 backdrop-blur-xs rounded-full shadow-2xs shadow-(--foreground)/80">
                     <img className="w-full p-0" src={ user } alt="Image DEM" />
                 </figure>
             </div>
