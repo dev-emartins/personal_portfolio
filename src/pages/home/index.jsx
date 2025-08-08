@@ -1,7 +1,7 @@
 import { FaRegCircleQuestion } from "react-icons/fa6"
 import Typewriter from "@/components/typewriter"
-import Button from "@/components/button"
 import user from "@/assets/user.png"
+import ButtonLink from "@/components/buttonlink"
 
 function Home(){
     return (
@@ -17,7 +17,7 @@ function Home(){
                     { <Typewriter  /> }
                 </h4>
                 <div className="w-full p-4 flex justify-center md:justify-start items-center">
-                    <Button icon={ FaRegCircleQuestion } text="Saiba mais" link="/about" />
+                    <ButtonLink icon={ FaRegCircleQuestion } text="Saiba mais" link="/about" />
                 </div>
             </div>
             <div className="w-full md:w-1/2 pt-3 md:pt-0 flex justify-center items-center">

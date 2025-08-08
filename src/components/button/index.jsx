@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom"
-
-function Button({ icon: Icon, text: text, link: link }) {
+function Button({ icon: Icon, text: text, type: type = "button" }) {
     return (
-        <Link to={ link } className="w-fit flex justify-between items-center gap-2 bg-(--foreground) text-(--background) px-8 py-3 rounded-full hover:bg-(--foreground)/80">
+        <button type={ type } className="w-full flex justify-center items-center gap-2 bg-(--foreground) text-(--background) px-8 py-3 rounded-2xl hover:bg-(--foreground)/80 cursor-pointer">
             <Icon className="text-xl" /> 
             <span className="font-sans font-medium text-sm">{ text }</span>
-        </Link>
+        </button>
     )
 }
 

@@ -1,7 +1,7 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom"
 import { FaChevronLeft } from "react-icons/fa6"
-import Button from "@/components/button"
 import figure from "@/assets/figure.png"
+import ButtonLink from "@/components/buttonlink"
 
 function ErrorPage(){
     const error = useRouteError()
@@ -27,7 +27,7 @@ function ErrorPage(){
                 <h1 className="w-full text-9xl font-black">{ error.status }</h1>
                 <p className="text-xl">{ translateStatusText(error.statusText) }</p>
                 <div className="w-full max-w-7xl flex justify-center items-center py-5">
-                    <Button icon={ FaChevronLeft } text="Voltar" link="/" />
+                    <ButtonLink icon={ FaChevronLeft } text="Voltar" link="/" />
                 </div>
             </div>
         </div>

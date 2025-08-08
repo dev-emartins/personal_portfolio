@@ -1,6 +1,6 @@
 import setup from "@/assets/setup.jpg"
 import { FaDownload } from "react-icons/fa6"
-import Button from "@/components/button"
+import ButtonLink from "@/components/buttonlink"
 
 function About(){
     return (
@@ -22,7 +22,7 @@ function About(){
                     intuitivas e experiências de usuário excepcionais.
                 </p>
                 <div className="w-full py-5 flex justify-center md:justify-start items-center">
-                    <Button icon={ FaDownload } text="Baixar CV" link="/cv.pdf" />
+                    <ButtonLink icon={ FaDownload } text="Baixar CV" link="/cv.pdf" />
                 </div>
             </div>
         </section>
