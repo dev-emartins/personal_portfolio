@@ -1,12 +1,11 @@
 import { FaDownload } from "react-icons/fa6"
-import ButtonLink from "@/components/buttonlink"
 import about_user from "@/assets/about_user.png"
 
 function About(){
     return (
         <section className="w-full max-w-7xl flex flex-col md:flex-row items-start justify-center gap-3">
             <div className="w-full md:w-1/2 pt-3 md:pt-0 flex justify-center items-center">
-                <figure className="w-11/12 rounded-2xl shadow-2xs shadow-(--foreground)/60">
+                <figure className="w-10/12 rounded-2xl shadow-2xs shadow-(--foreground)/60">
                     <img className="rounded-2xl" src={ about_user } alt="Image DEM" />
                 </figure>
             </div>
@@ -26,7 +25,16 @@ function About(){
                     intuitivas e experiências de usuário excepcionais.
                 </p>
                 <div className="w-full py-5 flex justify-center md:justify-start items-center">
-                    <ButtonLink icon={ FaDownload } text="Baixar CV" link="/cv.pdf" />
+                    <a 
+                    href="/curriculo.pdf" 
+                    target="_blank" 
+                    download="Currículo_Everaldo_Martins.pdf" 
+                    className="w-fit flex justify-between items-center gap-2 bg-(--foreground) text-(--background) px-8 py-3 rounded-full hover:bg-(--foreground)/80"
+                    rel="noopener noreferrer"
+                    >
+                        <FaDownload className="text-xl" /> 
+                        <span className="font-sans font-medium text-sm">Download CV</span>
+                    </a>
                 </div>
             </div>
         </section>
